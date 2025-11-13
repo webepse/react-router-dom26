@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Cars from "./components/Cars";
+import Marques from "./components/Marques";
+import NewCar from "./components/NewCar";
+import NotFound from "./components/NotFound";
+import Car from "./components/Car";
 
+const MyApp = () => (
+    <Router>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="cars/:name" element={<Car />} />
+            <Route path="cars" element={<Cars />} />
+            <Route path="cars/new" element={<NewCar />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    </Router>
+)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MyApp />
   </React.StrictMode>
 );
 
