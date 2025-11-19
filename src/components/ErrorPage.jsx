@@ -7,7 +7,7 @@ function ErrorPage(props) {
         <div className="container">
             <h1>Oups ! Une erreur est survenue</h1>
             <p>
-                <i>{error.statusText || error.message}</i>
+                <i>{error.status} - {error.statusText}</i>
             </p>
             <p>{error.error.message}</p>
         </div>

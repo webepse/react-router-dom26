@@ -13,7 +13,7 @@ import Car from "./components/Car";
 import Marque from "./components/Marque";
 import ErrorPage from "./components/ErrorPage";
 
-const router = createBrowserRouter([
+const myRouter = createBrowserRouter([
     {
         path: "/",
         element: <App />,
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={myRouter} />
   </React.StrictMode>
 );
 
