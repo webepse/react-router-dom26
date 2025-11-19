@@ -30,14 +30,16 @@ const myRouter = createBrowserRouter([
     {
         path: "/cars",
         element: <Cars />,
-    },
-    {
-        path: "/cars/new",
-        element: <NewCar />,
-    },
-    {
-        path: "/cars/:name",
-        element: <Car />
+        children: [
+            {
+                path: "/cars/new",
+                element: <NewCar />,
+            },
+            {
+                path: "/cars/:name",
+                element: <Car />
+            }
+        ]
     }
 ])
 
