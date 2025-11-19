@@ -35,11 +35,13 @@ function App() {
         <div>Valeur du state (fruit): {fruit}</div>
         <div>Valeur du state (state): {valeur}</div>
         <div>Valeur du state (league.membre1): {league.membre1.nom}</div>
-        <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/marques">Liste des marques</Link></li>
-            <li><Link to="/cars">Liste de voitures</Link></li>
-            <li><Link to="/cars/new">Création d'une voiture</Link></li>
+        <ul className="nav">
+            <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+            <li className="nav-item"><Link to="/marques" className="nav-link">Liste des marques</Link></li>
+            <li className="nav-item"><Link to="/marques/Alfa" className="nav-link">Alfa Romeo</Link></li>
+            <li className="nav-item"><Link to="/cars" className="nav-link">Liste de voitures</Link></li>
+            <li className="nav-item"><Link to="/cars/new" className="nav-link">Création d'une voiture</Link></li>
+            <li className="nav-item"><Link to="/cars/Tonale" className="nav-link">Alfa Romeo Tonale</Link></li>
         </ul>
         <button onClick={handleClick}>Changer le fruit</button>
         <button onClick={handleClick2}>Changer le state</button>

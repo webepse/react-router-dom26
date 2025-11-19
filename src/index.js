@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,11 +10,15 @@ import Marques from "./components/Marques";
 import NewCar from "./components/NewCar";
 import NotFound from "./components/NotFound";
 import Car from "./components/Car";
+import Marque from "./components/Marque";
+
 
 const MyApp = () => (
     <Router>
         <Routes>
             <Route path="/" element={<App />} />
+            <Route path="marques" element={<Marques />} />
+            <Route path="marques/:name" element={<Marque />} />
             <Route path="cars/:name" element={<Car />} />
             <Route path="cars" element={<Cars />} />
             <Route path="cars/new" element={<NewCar />} />
